@@ -12,4 +12,6 @@ Description: Provides RNA sequencing experiment used in Paschold et. al. (2012).
     data also contain the counts by parental genotype.
 License: GPL (>= 2)
 LazyData: true
+Depends:
+    R (>= 2.10)
 RoxygenNote: 5.0.1
