@@ -1,7 +1,9 @@
 library(dplyr)
 library(tidyr)
 
-d = read.table("data-raw/CorrectedGenomeResearchData.txt", header=TRUE)
+d = readr::read_delim("data-raw/CorrectedGenomeResearchData.txt", 
+                      delim = '\t',
+                      col_names = TRUE)
 
 Paschold2012 = d %>%
   gather(tmp,count,-GeneID) %>%
@@ -14,5 +16,7 @@ Paschold2012 = d %>%
   select(GeneID, genotype, replicate, flow_cell, line, count) %>%
   arrange(GeneID, genotype, replicate) %>%
   spread(line,count)
+
+devtools::use_data(Paschold2012, overwrite=TRUE, compress='xz')
 
 

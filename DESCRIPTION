@@ -1,7 +1,7 @@
 Package: Paschold2012
 Type: Package
 Title: Provides data from Paschold et. al. (2012)
-Version: 1.0.1
+Version: 1.0.2
 Date: 2016-04-25
 Author: Jarad Niemi
 Maintainer: Jarad Niemi <niemi@iastate.edu>
